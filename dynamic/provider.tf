@@ -5,6 +5,13 @@ terraform {
       version = "5.31.0"
     }
   }
+
+  backend "s3" {
+    bucket = "peudhvi-remote.state"
+    key    = "foreach"
+    region = "us-east-1"
+    dynamodb_table = "prudhvi-locking"
+  }
 }
 
 provider "aws" {
