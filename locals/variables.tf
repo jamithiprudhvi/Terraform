@@ -1,6 +1,6 @@
 variable "isprod" {
     type = bool
-    default = true
+    default = false
   
 }
 
